@@ -8,7 +8,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 lg:max-w-[1320px]">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <Image src={"/aboutus.png"} width={88} height={40} alt='blogs logo' className='mb-4'/>
+          <Image src={"/Aboutus.png"} width={88} height={40} alt='blogs logo' className='mb-4'/>
             <h3 className="text-4xl font-bold mb-4">
               <span className="text-orange-500">We </span>
               Create the best
