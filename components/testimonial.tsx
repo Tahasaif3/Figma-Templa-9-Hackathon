@@ -15,9 +15,9 @@ export default function TestimonialSection() {
   return (
     <section className="bg-black text-white py-12 md:py-16">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-8 md:mb-12">
-          <Image src='/Testimonials.png' alt="Testimonials heading" width={123} height={40} className='mb-2 mx-auto' />
-          <h3 className="text-2xl md:text-4xl font-bold mt-4">What our client are saying</h3>
+        <div className="text-start mb-8 md:mb-12">
+          <Image src='/Testimonials.png' alt="Testimonials heading" width={123} height={40} className='mb-3 mr-96' />
+          <h3 className="text-2xl md:text-4xl font-bold mt-4 text-white">What our client are saying</h3>
         </div>
         
         <div className="relative max-w-xl mx-auto">
