@@ -33,7 +33,7 @@ export default function TestimonialSection() {
                 />
               </div>
             </div>
-            <div className="text-orange-500 text-4xl font-serif text-center mb-4">"</div>
+            <div className="text-orange-500 text-4xl font-serif text-center mb-4"></div>
             <blockquote className="text-center text-sm md:text-base mb-4">
               {testimonials[0].quote}
             </blockquote>
