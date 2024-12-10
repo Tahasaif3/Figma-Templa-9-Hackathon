@@ -99,35 +99,37 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="bg-[#FF9F0D] flex flex-col sm:flex-row justify-between items-center w-full h-[100px] px-6">
-          {/* Footer Text */}
-          <p className="text-white text-[15px] sm:ml-24">
-            Copyright © 2023 by Taha Saif. All Rights Reserved.
-          </p>
+        <div className="bg-[#FF9F0D] flex flex-col sm:flex-row justify-between items-center w-full max-w-[1400px] mx-auto px-4 sm:w-[1400px] sm:px-0 h-auto sm:h-[100px]">
+    {/* Footer Text */}
+    <p className="text-white text-[15px] text-center sm:text-left sm:ml-24">
+      Copyright © 2023 by Taha Saif. All Rights Reserved.
+    </p>
 
-          <div className="flex space-x-4 sm:mr-24 mt-4 sm:mt-0">
-            {[Facebook, Twitter, Instagram, Youtube, Linkedin].map((Icon, index) => (
-              <Link
-                key={index}
-                href="#"
-                className="text-gray-400 bg-slate hover:text-white transition duration-300"
-              >
-                <Icon size={20} />
-              </Link>
-            ))}
-          </div>
-        </div>
+    {/* Social Media Icons */}
+    <div className="flex space-x-4 mt-4 sm:mt-0 sm:mr-24">
+      {[Facebook, Twitter, Instagram, Youtube, Linkedin].map((Icon, index) => (
+        <Link
+          key={index}
+          href="#"
+          className="text-gray-400 hover:text-white transition duration-300"
+        >
+          <Icon size={20} />
+        </Link>
+      ))}
+    </div>
+  </div>
 
-        {/* footer Image */}
-        <Image
-          src="/tree.png"
-          alt="Decorative plant"
-          width={200}
-          height={200}
-          className="absolute bottom-0 right-0  opacity-30 sm:hidden md:block"
-        />
-      </div>
-    </footer>
+  {/* Footer Image */}
+  <Image
+    src="/tree.png"
+    alt="Decorative plant"
+    width={200}
+    height={200}
+    className="absolute bottom-0 right-0 opacity-30 hidden sm:hidden md:block"
+  />
+
+  </div>
+</footer>
   )
 }
 
