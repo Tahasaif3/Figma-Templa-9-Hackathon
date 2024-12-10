@@ -23,9 +23,16 @@ const chefs = [
 export default function MenuSection() {
   return (
     <section className="bg-black text-white py-16">
-      <div className="container mx-auto px-4 gap-0">
-        {/* Logo */}
-        <Image src={"/choose.png"} width={142} height={40} alt='blogs logo' className='flex justify-center items-center ml-[570px]'/>
+        <div className="container px-4 ">
+      <div className="flex justify-center">
+        <Image 
+          src={"/choose.png"} 
+          width={169} 
+          height={40} 
+          alt='blogs logo' 
+          className=''
+        />
+      </div>
         <h3 className="text-4xl font-bold mb-8 flex justify-center items-center ml-[70px]">From Our Menu</h3>
 
         {/* Menu Categories */}
@@ -67,7 +74,15 @@ export default function MenuSection() {
         </div>
 
         {/* Chef Section */}
-        <Image src={"/Chefs.png"} width={59} height={40} alt='chefs logo' className='flex justify-center items-center mt-10 ml-[590px]'/>
+        <div className="container mx-auto px-4 ">
+      <div className="flex justify-center">
+        <Image 
+          src={"/chefs.png"} 
+          width={59} 
+          height={40} 
+          alt='blogs logo' 
+        />
+      </div>       
         <h3 className="text-4xl font-bold mb-8 flex justify-center items-center"><span className='text-orange-500'>Me</span>et Our Chef</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -82,6 +97,7 @@ export default function MenuSection() {
           <button className="border-2 border-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300">
             See More
           </button>
+        </div>
         </div>
       </div>
     </section>
