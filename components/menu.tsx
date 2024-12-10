@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const menuCategories = ['Lunch', 'Dinner', 'Dessert', 'Drink', 'Snack', 'Soups']
+const menuCategories = ['Lunch', 'Dinner', 'Dessert', 'Drink', 'Snack', 'Soup']
 
 const menuItems = [
   { name: 'Lettuce Leaf', price: '12.5', image: '/m1.png?height=80&width=80&text=Lettuce' },
@@ -37,20 +37,22 @@ export default function MenuSection() {
 
       {/* Menu Categories */}
   <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mb-6">
+    {/* Category Title */}
     <h3 className="text-2xl sm:text-3xl text-orange-500">Breakfast</h3>
 
     {/* Menu Items */}
-    <div className="flex gap-4 overflow-x-auto scrollbar-hide">
+    <div className="flex gap-[14px] overflow-x-auto scrollbar-hide">
       {menuCategories.map((category, index) => (
         <button 
           key={index} 
-          className="text-white bg-transparent border-none text-lg sm:text-xl whitespace-nowrap hover:text-orange-500 transition-colors"
+          className="text-white bg-transparent border-none text-lg sm:text-[16px] sm:mr-2 whitespace-nowrap hover:text-orange-500 transition-colors"
         >
           {category}
         </button>
       ))}
     </div>
   </div>
+
 
         {/* Menu Items */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -82,7 +84,7 @@ export default function MenuSection() {
         <div className="container mx-auto px-4 ">
       <div className="flex justify-center">
         <Image 
-          src={"/Chefs.png"} 
+          src={"/chefs.png"} 
           width={59} 
           height={40} 
           alt='blogs logo' 
