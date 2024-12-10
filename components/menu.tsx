@@ -23,58 +23,52 @@ const chefs = [
 export default function MenuSection() {
   return (
     <section className="bg-black text-white py-16">
-        <div className="container px-4 ">
-      <div className="flex justify-center items-center">
-        <Image 
-          src={"/choose.png"} 
-          width={169} 
-          height={40} 
-          alt='blogs logo' 
-          className=''
-        />
-      </div>
+      <div className="container px-4 ">
+        <div className="flex justify-center items-center">
+          <Image
+            src={"/choose.png"}
+            width={169}
+            height={40}
+            alt='blogs logo'
+            className=''
+          />
+        </div>
         <h3 className="text-4xl font-bold mb-8 flex justify-center items-center ml-8">From Our Menu</h3>
-
-      {/* Menu Categories */}
-  <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mb-6">
-    {/* Category Title */}
-    <h3 className="text-2xl sm:text-3xl text-orange-500">Breakfast</h3>
-
-    {/* Menu Items */}
-    <div className="flex gap-[14px] overflow-x-auto scrollbar-hide">
-      {menuCategories.map((category, index) => (
-        <button 
-          key={index} 
-          className="text-white bg-transparent border-none text-lg sm:text-[16px] sm:mr-2 whitespace-nowrap hover:text-orange-500 transition-colors"
-        >
-          {category}
-        </button>
-      ))}
-    </div>
-  </div>
+ 
+        {/* Menu Categories */}
+        <div className="flex justify-center items-center mb-10 sm:mb-4">
+          <Image
+            src={"/navbar.png"}
+            alt="navbar"
+            width={1056}
+            height={28}
+            className="w-full "
+          />
+        </div>
 
 
         {/* Menu Items */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-         <div className="relative w-full max-w-[600px] aspect-square bg-black overflow-hidden">
-      <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] z-10">
-        <Image
-          src="/main1.png"
-          alt="Herb border"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 z-20">
-        <Image
-          src="/main2.png"
-          alt="Salad plate"
-          width={400}
-          height={400}
-          className="rounded-full"
-        />
-      </div>
-    </div>
+          <div className="relative w-full max-w-[600px] aspect-square bg-black overflow-hidden">
+            <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] z-10">
+              <Image
+                src="/main1.png"
+                alt="Herb border"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 z-20">
+              <Image
+                src="/main2.png"
+                alt="Salad plate"
+                width={400}
+                height={400}
+                className="rounded-full"
+              />
+            </div>
+          </div>
+
 
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {menuItems.map((item, index) => (
@@ -92,28 +86,28 @@ export default function MenuSection() {
 
         {/* Chef Section */}
         <div className="container mx-auto px-4 ">
-      <div className="flex justify-center">
-        <Image 
-          src={"/Chefs.png"} 
-          width={59} 
-          height={40} 
-          alt='blogs logo' 
-        />
-      </div>        <h3 className="text-4xl font-bold mb-8 flex justify-center items-center"><span className='text-orange-500'>Me</span>et Our Chef</h3>
+          <div className="flex justify-center">
+            <Image
+              src={"/chefs.png"}
+              width={59}
+              height={40}
+              alt='blogs logo'
+            />
+          </div>        <h3 className="text-4xl font-bold mb-8 flex justify-center items-center"><span className='text-orange-500'>Me</span>et Our Chef</h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {chefs.map((chef, index) => (
-            <div key={index} className="text-center">
-              <Image src={chef.image} alt={chef.name} width={312} height={391} className="rounded-lg mx-auto mb-4" />
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {chefs.map((chef, index) => (
+              <div key={index} className="text-center">
+                <Image src={chef.image} alt={chef.name} width={312} height={391} className="rounded-lg mx-auto mb-4" />
+              </div>
+            ))}
+          </div>
 
-        <div className="text-center mt-8">
-          <button className="border-2 border-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300">
-            See More
-          </button>
-        </div>
+          <div className="text-center mt-8">
+            <button className="border-2 border-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300">
+              See More
+            </button>
+          </div>
         </div>
       </div>
     </section>
