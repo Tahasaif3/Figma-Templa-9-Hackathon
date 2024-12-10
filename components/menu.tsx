@@ -24,7 +24,7 @@ export default function MenuSection() {
   return (
     <section className="bg-black text-white py-16">
         <div className="container px-4 ">
-      <div className="flex justify-center">
+      <div className="flex justify-center items-center">
         <Image 
           src={"/choose.png"} 
           width={169} 
@@ -33,7 +33,7 @@ export default function MenuSection() {
           className=''
         />
       </div>
-        <h3 className="text-4xl font-bold mb-8 flex justify-center items-center ml-[70px]">From Our Menu</h3>
+        <h3 className="text-4xl font-bold mb-8 flex justify-center items-center ml-8">From Our Menu</h3>
 
         {/* Menu Categories */}
         <div className="flex flex-wrap mb-8 justify-between items-center">
@@ -82,8 +82,7 @@ export default function MenuSection() {
           height={40} 
           alt='blogs logo' 
         />
-      </div>       
-        <h3 className="text-4xl font-bold mb-8 flex justify-center items-center"><span className='text-orange-500'>Me</span>et Our Chef</h3>
+      </div>        <h3 className="text-4xl font-bold mb-8 flex justify-center items-center"><span className='text-orange-500'>Me</span>et Our Chef</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {chefs.map((chef, index) => (
