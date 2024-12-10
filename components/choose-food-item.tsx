@@ -10,9 +10,17 @@ const foodItems = [
 
 export default function FoodCategorySection() {
   return (
-    <section className="bg-black text-white py-16 min-h-screen">
-      <div className="container mx-auto px-4 sm:mx-auto">
-        <Image src={"/wwhy.png"} width={169} height={40} alt='blogs logo' className='flex justify-center items-center ml-[528px]'/>
+    <section className="bg-black text-white min-h-screen">
+      <div className="container mx-auto px-4 ">
+        <div className="flex justify-center">
+          <Image
+            src={"/wwhy.png"}
+            width={169}
+            height={40}
+            alt='blogs logo'
+          />
+        </div>
+
         <h3 className="text-center text-4xl font-bold mb-8">
           Ch<span className="text-orange-500">oo</span>se Food Item
         </h3>
