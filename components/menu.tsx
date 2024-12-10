@@ -84,7 +84,7 @@ export default function MenuSection() {
         <div className="container mx-auto px-4 ">
       <div className="flex justify-center">
         <Image 
-          src={"/chefs.png"} 
+          src={"/Chefs.png"} 
           width={59} 
           height={40} 
           alt='blogs logo' 
