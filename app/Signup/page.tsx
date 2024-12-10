@@ -1,6 +1,6 @@
 "use client"
 
-import { Lock, Mail, Search, User } from "lucide-react";
+import { Lock, LogInIcon, Mail, Search, User } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import { MdShoppingCartCheckout } from "react-icons/md";
 import { AiOutlineMenu } from "react-icons/ai";
 
 export default function SignUpPage() {
-  
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,7 +19,7 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen bg-white">
-    <header className="bg-black py-2">
+      <header className="bg-black py-2">
         <nav className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="text-white font-bold text-2xl"><span className="text-orange-500 font-bold text-2xl">Food</span>luck</div>
 
@@ -30,8 +30,8 @@ export default function SignUpPage() {
             <AiOutlineMenu />
           </button>
           <ul
-            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br/>       
-             <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
+            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br />
+            <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
             <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
             <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
             <li><Link href="/Pages" className="hover:text-orange-500">Pages</Link></li>
@@ -76,9 +76,9 @@ export default function SignUpPage() {
       </div>
 
       {/* Signup Form */}
-      <main className="flex-grow flex items-center justify-center px-4 py-12">
+      <main className="flex-grow flex items-center justify-center px-8 py-8">
         <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-          <h2 className="text-3xl font-bold text-center mb-6 mr-60">Sign Up</h2>
+          <h2 className="text-3xl font-bold whitespace-nowrap md:text-4xl sm:text:md mb-5">Sign Up</h2>
           <form>
             <div className="mb-4 relative">
               <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
@@ -134,28 +134,34 @@ export default function SignUpPage() {
                 <span className="px-2 bg-white text-gray-500">OR</span>
               </div>
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <button className="flex justify-center items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
                 <FaGoogle width={20} height={20} className="mr-2" />
-                Sign up with Google
+                Sign in with Google
               </button>
               <button className="flex justify-center items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
                 <FaApple width={20} height={20} className="mr-2" />
-                 Sign up with Apple
+                Sign in with Apple
               </button>
-         <Link href={"/Signin"}>
-         <button className="w-full sm:w-auto h-[50px] flex justify-center items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-center text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 hover:border-2 hover:border-orange-400">
-            Already Have an Account? Log in
-            </button>
-            </Link>
-
             </div>
+
+
+  {/* Login Button */}
+  <Link href={"/Signin"}>
+    <button className="flex justify-center items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+      <LogInIcon width={20} height={20} className="mr-2" />
+      Login
+    </button>
+  </Link>
+</div>
+
           </div>
         </div>
       </main>
 
       {/* Footer */}
-     <Footer/>
+      <Footer />
     </div>
   );
 }
