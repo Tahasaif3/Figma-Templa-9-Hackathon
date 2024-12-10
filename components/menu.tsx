@@ -35,17 +35,22 @@ export default function MenuSection() {
       </div>
         <h3 className="text-4xl font-bold mb-8 flex justify-center items-center ml-8">From Our Menu</h3>
 
-        {/* Menu Categories */}
-        <div className="flex flex-wrap mb-8 justify-between items-center">
-          <h3 className="text-3xl text-orange-500 flex justify-start items-start">Breakfast</h3>
-          <div className="flex flex-wrap gap-4">
-            {menuCategories.map((category, index) => (
-              <button key={index} className="text-white bg-transparent border-none text-xl hover:text-orange-500">
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
+      {/* Menu Categories */}
+  <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center mb-6">
+    <h3 className="text-2xl sm:text-3xl text-orange-500">Breakfast</h3>
+
+    {/* Menu Items */}
+    <div className="flex gap-4 overflow-x-auto scrollbar-hide">
+      {menuCategories.map((category, index) => (
+        <button 
+          key={index} 
+          className="text-white bg-transparent border-none text-lg sm:text-xl whitespace-nowrap hover:text-orange-500 transition-colors"
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  </div>
 
         {/* Menu Items */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
