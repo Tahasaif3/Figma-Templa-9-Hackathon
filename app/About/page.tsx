@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/footer'
 import { ChefHat, Coffee, Play, Search, Star, Wind } from 'lucide-react'
-import { FaShoppingBag, FaUser} from 'react-icons/fa'
+import { FaShoppingBag, FaUser } from 'react-icons/fa'
 import { MdShoppingCartCheckout } from 'react-icons/md'
 import { AiOutlineMenu } from 'react-icons/ai'
 
@@ -175,7 +175,7 @@ export default function About() {
 
                         {/* Content Section */}
                         <div className="space-y-6 w-full lg:w-[520px]">
-                            <Image src={"/Aboutus.png"} width={112} height={26} alt='blogs logo' className='mb-1' />
+                            <Image src={"/aboutus.png"} width={112} height={26} alt='blogs logo' className='mb-1' />
                             <h2 className="text-3xl font-bold leading-tight">
                                 Food is an important part Of a balanced Diet
                             </h2>
@@ -246,7 +246,7 @@ export default function About() {
             </div>
 
             {/* Team Member Section */}
-            <section className="bg-orange-400 py-16">
+            <section className="bg-orange-400 py-8">
                 <div className="container mx-auto px-4">
                     <h2 className="text-4xl font-bold text-center mb-2 text-white">Team Member</h2>
                     <p className='text-sm font-normal text-white text-center w-full lg:w-[418px] mx-auto mb-12'>
@@ -254,8 +254,8 @@ export default function About() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {teamMembers.map((member, index) => (
-                            <div key={index} className="text-center bg-white rounded-lg shadow-lg overflow-hidden">
-                                <div className="relative w-full aspect-square mb-4">
+                            <div key={index} className="text-center bg-white rounded-lg shadow-lg overflow-auto">
+                                <div className="relative w-full aspect-square mb-2">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
@@ -272,26 +272,31 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
-            {/*testimonial section*/}
-            <section className="bg-ink-50 text-white py-12 md:py-16">
-                <div className="container mx-auto px-2 max-w-6xl">
-                    <div className="text-start mb-8 md:mb-12">
+            
+            {/* Testimonials section */}
+            <section className="text-black py-16 md:py-20">
+                <div className="container mx-auto px-4 max-w-7xl">
+                    <div className="text-start mb-12 md:mb-8">
                         <Image src='/Testimonials.png' alt="Testimonials heading" width={123} height={40} className='mb-3 mr-96' />
                         <h3 className="text-2xl md:text-4xl font-bold mt-4 text-black">What our client are saying</h3>
                     </div>
 
-                    <div className="relative max-w-xl mx-auto">
-                        <div className="text-black p-6 md:p-8 rounded-lg shadow-lg">
-                            <Image
-                                src={testimonials[0].image}
-                                alt={testimonials[0].name}
-                                width={80}
-                                height={80}
-                                className="rounded-full mx-auto mb-24"
-                            />
+                    <div className="relative max-w-xl mx-auto mt-16 md:mt-8">
+                        <div className="bg-white text-black mt-10 p-6 md:p-8 rounded-lg shadow-lg pt-20 relative">
+                            <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                                <div className="w-24 h-24 rounded-full bg-black p-1">
+                                    <Image
+                                        src={testimonials[0].image}
+                                        alt={testimonials[0].name}
+                                        width={96}
+                                        height={96}
+                                        className="rounded-full"
+                                    />
+                                </div>
+                            </div>
+                            <div className="text-orange-500 text-4xl font-serif text-center mb-4">"</div>
                             <blockquote className="text-center text-sm md:text-base mb-4">
-                                `{testimonials[0].quote}`
+                                {testimonials[0].quote}
                             </blockquote>
                             <div className="flex justify-center mb-2">
                                 {[...Array(5)].map((_, i) => (
@@ -315,9 +320,9 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
+            
             {/* Menu Section */}
-            <section className="py-16 bg-pink-50">
+            <section className="py-16">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center mb-8">Our Food Menu</h2>
                     <div className="relative mb-8 px-4 sm:px-0">
