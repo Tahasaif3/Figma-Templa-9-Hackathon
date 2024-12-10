@@ -199,11 +199,18 @@ function Blogs() {
                                         </Link>
                                     </div>
                                 </article>
-                            ))}
+                              ))}
                         </div>
 
                         {/* Sidebar */}
                         <div className="space-y-8">
+                            <div>
+                                <Image
+                                src={"/s.png"}
+                                alt='search icon'
+                                width={421}
+                                height={70}/>
+                            </div>
                             {/* Author Profile */}
                             <div className="bg-white p-6 rounded-lg shadow-sm text-center">
                                 <Avatar className="w-20 h-20 mx-auto mb-4">
