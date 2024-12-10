@@ -1,7 +1,5 @@
 import Image from 'next/image'
 
-const menuCategories = ['Lunch', 'Dinner', 'Dessert', 'Drink', 'Snack', 'Soup']
-
 const menuItems = [
   { name: 'Lettuce Leaf', price: '12.5', image: '/m1.png?height=80&width=80&text=Lettuce' },
   { name: 'Fresh Breakfast', price: '16.5', image: '/m2.png?height=80&width=80&text=Breakfast' },
