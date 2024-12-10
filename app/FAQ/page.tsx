@@ -1,13 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, ChevronUp, Search } from 'lucide-react'
+import { Search } from 'lucide-react'
 import Footer from '@/components/footer'
 import Image from 'next/image'
-import { FaShoppingBag, FaUser } from 'react-icons/fa'
-import { MdShoppingCartCheckout } from 'react-icons/md'
+import {FaShoppingBag, FaUser } from 'react-icons/fa'
+import { MdAdd, MdShoppingCartCheckout } from 'react-icons/md'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { FaMinus } from 'react-icons/fa6'
 
 const faqs = [
   {
@@ -47,9 +48,9 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       >
         <span className="text-lg font-medium text-gray-900">{question}</span>
         {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-orange-500" />
+          <FaMinus className="h-5 w-5 text-orange-500" />
         ) : (
-          <ChevronDown className="h-5 w-5 text-orange-500" />
+          <MdAdd className="h-5 w-5 text-orange-500" />
         )}
       </button>
       {isOpen && (
