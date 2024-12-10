@@ -56,15 +56,25 @@ export default function MenuSection() {
 
         {/* Menu Items */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="md:col-span-1">
-            <Image
-              src="/m9.png?height=400&width=400&text=Featured+Dish"
-              alt="Featured Dish"
-              width={400}
-              height={400}
-              className="rounded-lg"
-            />
-          </div>
+         <div className="relative w-full max-w-[600px] aspect-square bg-black overflow-hidden">
+      <div className="absolute -top-[10%] -left-[10%] w-[120%] h-[120%] z-10">
+        <Image
+          src="/main1.png"
+          alt="Herb border"
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 z-20">
+        <Image
+          src="/main2.png"
+          alt="Salad plate"
+          width={400}
+          height={400}
+          className="rounded-full"
+        />
+      </div>
+    </div>
 
           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {menuItems.map((item, index) => (
