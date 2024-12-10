@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Search } from 'lucide-react'
 import { FaShoppingBag } from 'react-icons/fa'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { RiArrowDropDownLine } from 'react-icons/ri'
 
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,8 +42,12 @@ export default function HeroSection() {
               <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
               <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
               <li><Link href="/Pages" className="hover:text-orange-500">Pages</Link></li>
-              <li><Link href="/About" className="hover:text-orange-500">About</Link></li>
-              <li><Link href="/Shop" className="hover:text-orange-500">Shop</Link></li>
+               <li>
+                <Link href="/About" className="inline-flex items-center hover:text-orange-500">
+                  About
+                  <RiArrowDropDownLine className="text-lg" />
+                </Link>
+              </li>              <li><Link href="/Shop" className="hover:text-orange-500">Shop</Link></li>
               <li><Link href="/Chef" className="hover:text-orange-500">Chef</Link></li>
             </ul>
 
