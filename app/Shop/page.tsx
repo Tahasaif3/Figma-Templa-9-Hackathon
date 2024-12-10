@@ -49,7 +49,7 @@ export default function ShopPage() {
 
   return (
     <div className="bg-white min-h-screen">
-    <header className="bg-black py-2">
+      <header className="bg-black py-2">
         <nav className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="text-white font-bold text-2xl"><span className="text-orange-500 font-bold text-2xl">Food</span>luck</div>
 
@@ -60,8 +60,8 @@ export default function ShopPage() {
             <AiOutlineMenu />
           </button>
           <ul
-            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br/>       
-             <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
+            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br />
+            <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
             <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
             <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
             <li><Link href="/Pages" className="hover:text-orange-500">Pages</Link></li>
@@ -106,26 +106,28 @@ export default function ShopPage() {
       </div>
 
       <div className="container mx-auto px-4 mb-36">
-        <div className="flex justify-between items-center mb-8 mt-8">
-          <div className="flex items-center">
-            <span className="mr-2 text-black ml-10">Sort By:</span>
-            <select className="border rounded p-2 text-black">
-              <option>Default</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-            </select>
-          </div>
-          <div className="flex items-center mr-10">
-            <span className="mr-2 text-black">Show:</span>
-            <select className="border rounded p-2 text-black">
-              <option>12</option>
-              <option>24</option>
-              <option>36</option>
-            </select>
-          </div>
-        </div>
+      <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mb-8 mt-8">
+  <div className="flex items-center ml-8 mb-4 sm:mb-0">
+    <span className="ml-2 text-black">Sort By:</span>
+    <select className="bg-white border rounded p-2 text-black min-w-[150px]">
+      <option>Default</option>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+    </select>
+  </div>
+  <div className="flex mr-5 items-center">
+    <span className="mr-2 text-black">Show:</span>
+    <select className="bg-white border rounded p-2 text-black min-w-[80px]">
+      <option>12</option>
+      <option>24</option>
+      <option>36</option>
+    </select>
+  </div>
+</div>
 
-        <div className="flex flex-wrap mx-4">
+ 
+
+        <div className="flex flex-wrap mx-4 my-4">
           <div className="w-full md:w-3/4 px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {products.map((product, index) => (
@@ -149,16 +151,15 @@ export default function ShopPage() {
             </div>
           </div>
 
-          <div className="w-full md:w-1/4 px-4">
+          <div className="w-full md:w-1/4 px-4 sm:mt-4 md:mt-0">
             <div className="bg-gray-100 p-6 rounded-lg">
               <div className="mb-6">
                 <div className="relative">
                   <Image
-                  src={"/search.png"}
-                  alt='search icon'
-                  width={248}
-                  height={46}/>
-                  <Search className="absolute right-3 top-2.5 text-gray-400 bg-[#FF9F0D]" size={20} />
+                    src={"/search.png"}
+                    alt='search icon'
+                    width={248}
+                    height={46} />
                 </div>
               </div>
 
@@ -184,11 +185,11 @@ export default function ShopPage() {
               </div>
 
               <div className="mb-6">
-                <Image 
-                 src={"/filterr.png"}
-                 alt='filter categories image'
-                 width={248}
-                 height={87}
+                <Image
+                  src={"/filterr.png"}
+                  alt='filter categories image'
+                  width={248}
+                  height={87}
                 />
               </div>
 
@@ -222,8 +223,10 @@ export default function ShopPage() {
           alt="pagination"
           width={150}
           height={200}
-          className='mt-10 ml-96'
+          className="mt-10 mx-auto sm:ml-72 sm:mr-72 lg:ml-96 lg:mr-96"
         />
+
+
       </div>
       <Footer />
     </div>
