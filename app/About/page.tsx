@@ -5,35 +5,35 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/footer'
-import { ChefHat, Coffee, Search, Star, Wind } from 'lucide-react'
-import { FaShoppingBag, FaUser } from 'react-icons/fa'
+import { ChefHat, Coffee, Play, Search, Star, Watch, Wind } from 'lucide-react'
+import { FaShoppingBag, FaUser, FaVideo } from 'react-icons/fa'
 import { MdShoppingCartCheckout } from 'react-icons/md'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 export default function About() {
     const teamMembers = [
         {
-          name: "Mark Henry",
-          role: "Owner",
-          image: "/teams.png",
+            name: "Mark Henry",
+            role: "Owner",
+            image: "/teams.png",
         },
         {
-          name: "Lucky Helen",
-          role: "Chef",
-          image: "/teams.png",
+            name: "Lucky Helen",
+            role: "Chef",
+            image: "/teams.png",
         },
         {
             name: "Moon Henry",
             role: "Founder",
             image: "/teams.png",
-          },
-          {
+        },
+        {
             name: "Tom Monrow",
             role: "Specialist",
             image: "/teams.png",
-          },
-      ];
-      
+        },
+    ];
+
 
     const menuItems = [
         {
@@ -77,13 +77,22 @@ export default function About() {
             description: "Toasted Pine Nut topped with creamy, herbs"
         }
     ]
+    const testimonials = [
+        {
+            name: 'Alamin Hasan',
+            role: 'Food Specialist',
+            image: '/t.png',
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum.',
+            rating: 4,
+        },
+    ]
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-      setIsMenuOpen((prev) => !prev);
+        setIsMenuOpen((prev) => !prev);
     };
-  
+
     return (
         <div className='bg-white min-h-screen'>
             <header className="bg-black py-2">
@@ -99,7 +108,7 @@ export default function About() {
                         <AiOutlineMenu />
                     </button>
                     <ul
-                        className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br/>       
+                        className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br />
                         <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
                         <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
                         <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
@@ -117,17 +126,17 @@ export default function About() {
                             />
                             <Search className="absolute right-3 top-2.5 text-gray-400" size={18} />
                         </div>
-                        <Link href={"/ShoppingCart"}> 
+                        <Link href={"/ShoppingCart"}>
                             <button className="bg-gray-800 p-2 rounded-full">
                                 <FaShoppingBag />
                             </button>
                         </Link>
-                        <Link href={"/Signup"}> 
+                        <Link href={"/Signup"}>
                             <button className="bg-gray-800 p-2 rounded-full">
                                 <FaUser />
                             </button>
                         </Link>
-                        <Link href={"/Checkout"}> 
+                        <Link href={"/Checkout"}>
                             <button className="bg-gray-800 p-2 rounded-full">
                                 <MdShoppingCartCheckout />
                             </button>
@@ -166,6 +175,7 @@ export default function About() {
 
                         {/* Content Section */}
                         <div className="space-y-6 w-full lg:w-[520px]">
+                            <Image src={"/aboutus.png"} width={112} height={26} alt='blogs logo' className='mb-1' />
                             <h2 className="text-3xl font-bold leading-tight">
                                 Food is an important part Of a balanced Diet
                             </h2>
@@ -178,7 +188,8 @@ export default function About() {
                                 <button className="px-6 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors">
                                     Order Now
                                 </button>
-                                <button className="px-6 py-3 border border-orange-500 text-orange-500 rounded-md hover:bg-orange-50 transition-colors">
+                                <button className="flex items-center px-6 py-3 border  text-orange-500 rounded-md hover:bg-orange-50 transition-colors">
+                                    <Play className="mr-2" />
                                     Watch Video
                                 </button>
                             </div>
@@ -262,29 +273,45 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Testimonial Section */}
-            <section className="py-16 bg-pink-50">
-                <div className="container px-4 text-center max-w-3xl">
-                    <h2 className="text-xl font-serif italic text-orange-500">About us</h2>
-                    <h2 className="text-3xl font-bold mb-8">What our clients are saying</h2>
-                    <div className="mb-6">
-                        <Image
-                            src="/clients.png?height=80&width=80"
-                            alt="Client"
-                            width={80}
-                            height={80}
-                            className="rounded-full mx-auto mb-4"
-                        />
-                        <p className="text-gray-600 mb-4 w-full lg:w-[420px] mx-auto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus.
-                        </p>
-                        <div className="flex justify-center gap-1 mb-2">
-                            {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+            {/*testimonial section*/}
+            <section className="bg-ink-50 text-white py-12 md:py-16">
+                <div className="container mx-auto px-2 max-w-6xl">
+                    <div className="text-start mb-8 md:mb-12">
+                        <Image src='/Testimonials.png' alt="Testimonials heading" width={123} height={40} className='mb-3 mr-96' />
+                        <h3 className="text-2xl md:text-4xl font-bold mt-4 text-black">What our client are saying</h3>
+                    </div>
+
+                    <div className="relative max-w-xl mx-auto">
+                        <div className="text-black p-6 md:p-8 rounded-lg shadow-lg">
+                            <Image
+                                src={testimonials[0].image}
+                                alt={testimonials[0].name}
+                                width={80}
+                                height={80}
+                                className="rounded-full mx-auto mb-24"
+                            />
+                            <blockquote className="text-center text-sm md:text-base mb-4">
+                                `{testimonials[0].quote}`
+                            </blockquote>
+                            <div className="flex justify-center mb-2">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star
+                                        key={i}
+                                        className={`w-4 h-4 md:w-5 md:h-5 ${i < testimonials[0].rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                                    />
+                                ))}
+                            </div>
+                            <p className="text-center font-bold">{testimonials[0].name}</p>
+                            <p className="text-center text-gray-600 text-sm">{testimonials[0].role}</p>
+                        </div>
+                        <div className="flex justify-center mt-4">
+                            {[...Array(4)].map((_, i) => (
+                                <div
+                                    key={i}
+                                    className={`w-2 h-2 rounded-full mx-1 ${i === 0 ? 'bg-orange-500' : 'bg-gray-400'}`}
+                                ></div>
                             ))}
                         </div>
-                        <h3 className="font-semibold">Alamin Hasan</h3>
-                        <p className="text-sm text-gray-500">Food Specialist</p>
                     </div>
                 </div>
             </section>
@@ -293,15 +320,21 @@ export default function About() {
             <section className="py-16 bg-pink-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center mb-8">Our Food Menu</h2>
-                    <div className="flex justify-center gap-4 mb-8">
-                        {["Breakfast", "Lunch", "Dinner", "Dessert", "Drink", "Snack"].map((item) => (
-                            <button
-                                key={item}
-                                className="px-4 py-2 text-gray-600 hover:text-orange-500 focus:text-orange-500"
-                            >
-                                {item}
-                            </button>
-                        ))}
+                    <div className="relative mb-8 px-4 sm:px-0">
+                        <div
+                            className="flex overflow-x-auto scrollbar-hide gap-4 pb-4 sm:pb-0 sm:flex-wrap sm:justify-center"
+                        >
+                            {["Breakfast", "Lunch", "Dinner", "Dessert", "Drink", "Snack"].map((item) => (
+                                <button
+                                    key={item}
+                                    className="flex-none px-4 py-2 text-sm sm:text-base whitespace-nowrap text-gray-600 hover:text-orange-500 focus:text-orange-500 transition-colors duration-200 ease-in-out"
+                                >
+                                    {item}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-white to-transparent sm:hidden"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-4 bg-gradient-to-l from-white to-transparent sm:hidden"></div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {menuItems.map((item, index) => (
