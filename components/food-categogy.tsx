@@ -30,7 +30,15 @@ export default function WhyChooseUsSection() {
             </div>
           </div>
           <div className="lg:w-1/2">
-            <h2 className="text-2xl font-serif italic text-orange-500 mb-2">Why Choose us</h2>
+            <div className="flex justify-start items-start">
+          <Image
+            src={"/whyy.png"}
+            width={174}
+            height={40}
+            alt='why choose us logo'
+            className=''
+          />
+        </div>
             <h3 className="text-4xl font-bold mb-4"> <span className="text-orange-500">Extra</span> ordinary taste <br /> And Experienced </h3>
             <p className="text-gray-400 mb-8"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat. </p>
             <div className="grid grid-cols-3 gap-4 mb-8">
