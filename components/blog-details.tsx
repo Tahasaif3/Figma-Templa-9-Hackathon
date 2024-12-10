@@ -103,8 +103,8 @@ export default function BlogDetails({ post }: BlogDetailsProps) {
             <AiOutlineMenu />
           </button>
           <ul
-            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br/>       
-             <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
+            className={`${isMenuOpen ? "block" : "hidden"} md:flex space-x-6 text-white justify-center items-center w-full md:w-auto`}><br />
+            <li><Link href="/" className="hover:text-orange-500">Home</Link></li>
             <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
             <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
             <li><Link href="/Pages" className="hover:text-orange-500">Pages</Link></li>
@@ -258,6 +258,13 @@ export default function BlogDetails({ post }: BlogDetailsProps) {
 
           {/* Sidebar */}
           <div className="space-y-8 mt-8 md:mt-0">
+            <div>
+              <Image
+                src={"/s.png"}
+                alt='search icon'
+                width={421}
+                height={70} />
+            </div>
             {/* Author Profile */}
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm text-center">
               <Avatar className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4">
