@@ -2,31 +2,55 @@
 
 This project is a fully responsive, dynamic website built during a hackathon, showcasing an elite restaurant's features. It was developed using **Next.js**, **TypeScript**, and **Tailwind CSS**, leveraging modern web development practices and dynamic routing for a seamless user experience. This project implements a high-quality design based on Template 9 and adapts it for enhanced functionality.
 
-## 🚀 Features
+## 🚀 Features  
 
-### Dynamic Routing
-- Each section (e.g., menu categories, chef profiles, blogs) has dedicated routes for better navigation.
+### Dynamic Routing  
+- Each section, including shop products, blogs page, and product details, has dedicated routes for seamless navigation.  
 
-### Fully Responsive Design
-- The website is optimized for devices of all sizes, from mobile to desktop, ensuring usability and elegance across platforms.
+### Landing Page  
+- A captivating and modern landing page to attract users and provide a clear overview of your website's purpose.  
 
-### Modern UI/UX
-- Built using Tailwind CSS for rapid and beautiful styling.
-- Uses clean and minimalistic design principles to create a visually appealing user experience.
+### About Page  
+- A well-designed page to highlight your mission, vision, and story, building trust with visitors.  
 
-### Menu Categories
-- Dynamic display of various menu items such as Breakfast, Lunch, Dinner, Desserts, and Drinks.
-- Each menu item is visually enhanced with images, prices, and descriptions.
+### Shop Page  
+- Displays a wide range of products with filtering and sorting options for an enhanced shopping experience.  
+- Dynamic routing for individual product details with comprehensive information.  
 
-### Chef Profiles
-- Showcases the restaurant's elite team with dedicated sections for chefs, including their names, roles, and images.
+### Shopping Cart Page  
+- A detailed shopping cart page where users can review selected items, adjust quantities, and see the total cost.  
 
-### Blogs Section
-- Dynamic routing and styling allow for easy integration of blogs to highlight the restaurant’s news and events.
+### Signup and Login Pages  
+- Separate and secure signup and login pages with form validation to ensure a smooth user authentication process.  
 
-### Optimized Performance
-- Leverages Next.js features like image optimization, lazy loading, and pre-rendering to ensure fast performance and SEO.
+### FAQ Page  
+- A dedicated FAQ section to address common questions and provide support for users.  
 
+### Checkout Page  
+- A streamlined checkout process with payment integration and user-friendly design.  
+
+### 404 Error Page  
+- A custom error page with navigation suggestions to enhance user experience when a page is not found.  
+
+### Fully Responsive Design  
+- Optimized for all devices, ensuring usability and aesthetics across mobile, tablet, and desktop platforms.  
+
+### Modern UI/UX  
+- Built with Tailwind CSS for modern styling and a visually pleasing user experience.  
+- Follows clean and minimalistic design principles.  
+
+### Menu Categories  
+- Dynamic display of various categories, such as Breakfast, Lunch, Dinner, Desserts, and Drinks, with detailed visuals.  
+
+### Chef Profiles  
+- Features information about chefs with names, roles, and images to humanize your brand.  
+
+### Blogs Section  
+- A dedicated area for restaurant updates, recipes, and events, integrated with dynamic routing and modern styling.  
+
+### Optimized Performance  
+- Utilizes Next.js features like server-side rendering, image optimization, lazy loading, and pre-rendering for fast performance and improved SEO.
+ 
 ---
 
 ## 🛠️ Technologies Used
