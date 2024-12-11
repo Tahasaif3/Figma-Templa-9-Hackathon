@@ -62,6 +62,7 @@ This project is a fully responsive, dynamic website built during a hackathon, sh
 
 ### Additional Libraries:
 - `lucide-react`: For modern, customizable icons.
+- `shadcn UI`: For modern, and beautiful reusable components.
 - `react-icons`: To enhance the website with additional icon options.
 
 ---
