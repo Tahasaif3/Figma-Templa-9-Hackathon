@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Search } from 'lucide-react'
-import { FaShoppingBag } from 'react-icons/fa'
+import { FaFacebookF, FaPinterestP, FaShoppingBag, FaTwitter } from 'react-icons/fa'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 
@@ -42,12 +42,13 @@ export default function HeroSection() {
               <li><Link href="/Menu" className="hover:text-orange-500">Menu</Link></li>
               <li><Link href="/Blog" className="hover:text-orange-500">Blog</Link></li>
               <li><Link href="/Pages" className="hover:text-orange-500">Pages</Link></li>
-               <li>
+              <li>
                 <Link href="/About" className="inline-flex items-center hover:text-orange-500">
                   About
                   <RiArrowDropDownLine className="text-lg" />
                 </Link>
-              </li>              <li><Link href="/Shop" className="hover:text-orange-500">Shop</Link></li>
+              </li>
+              <li><Link href="/Shop" className="hover:text-orange-500">Shop</Link></li>
               <li><Link href="/Chef" className="hover:text-orange-500">Chef</Link></li>
             </ul>
 
@@ -84,20 +85,65 @@ export default function HeroSection() {
         </nav>
 
         {/* Hero Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16 md:py-24">
-          <div className="space-y-6 text-center md:text-left">
-            <Image src={"/quick.png"} alt='Quick and amazing logo' width={249} height={40} className="mx-auto md:mx-0" />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-orange-500">The</span> Art of speed<br />
-              food Quality
-            </h1>
-            <p className="text-gray-400 max-w-md mx-auto md:mx-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Varius sed pharetra dictum neque massa congue
-            </p>
-            <button className="bg-orange-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
-              See Menu
-            </button>
+        <div
+          className="relative bg-cover bg-center"
+          style={{
+            backgroundImage: `url('/bg.png')`,
+          }}
+        >
+       <div className="absolute inset-0 bg-black opacity-80"></div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16 md:py-24 relative z-10">
+          <div className="space-y-6 text-center mr-10 md:text-left">
+            <div className="flex justify-center items-center">
+              {/* Social Icons with Lines */}
+              <div className="hidden md:flex flex-col items-center gap-6">
+                {/* Top Line */}
+                <div className="w-[2px] h-24 bg-white/60"></div>
+
+                {/* Icons */}
+                <div className="flex flex-col items-center gap-6">
+                  {[
+                    { icon: FaFacebookF, href: "#" },
+                    { icon: FaTwitter, href: "#" },
+                    { icon: FaPinterestP, href: "#" }
+                  ].map(({ icon: Icon, href }, index) => (
+                    <Link
+                      key={index}
+                      href={href}
+                      className="flex justify-center items-center w-8 h-8 rounded-full bg-transparent hover:text-orange-500 transition-colors"
+                    >
+                      <Icon className="w-4 h-4" />
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Bottom Line */}
+                <div className="w-[2px] h-24 bg-white/60"></div>
+              </div>
+
+              {/* Hero Content */}
+              <div className="flex-1 ml-5">
+                <Image
+                  src="/quick.png"
+                  alt='Quick and amazing logo'
+                  width={249}
+                  height={40}
+                  className="mx-auto md:mx-0"
+                />
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-6">
+                  <span className="text-orange-500">The</span> Art of speed<br />
+                  food Quality
+                </h1>
+                <p className="text-gray-400 max-w-md mt-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Varius sed pharetra dictum neque massa congue
+                </p>
+                <button className="bg-orange-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 mt-8">
+                  See Menu
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Image hero */}
@@ -111,6 +157,7 @@ export default function HeroSection() {
               priority
             />
           </div>
+        </div>
         </div>
       </div>
     </div>
