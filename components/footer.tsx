@@ -106,12 +106,12 @@ export default function Footer() {
     </p>
 
     {/* Social Media Icons */}
-    <div className="flex space-x-4 mt-4 sm:mt-0 sm:mr-24">
+    <div className="flex space-x-4 mt-4 sm:mt-0 sm:mr-40">
       {[Facebook, Twitter, Instagram, Youtube, Linkedin].map((Icon, index) => (
         <Link
           key={index}
           href="#"
-          className="text-gray-400 hover:text-white transition duration-300"
+          className="flex items-center justify-center text-gray-400 bg-white w-8 h-8  hover:text-white transition duration-300"
         >
           <Icon size={20} />
         </Link>
