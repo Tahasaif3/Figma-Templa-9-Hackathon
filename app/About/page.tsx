@@ -175,7 +175,7 @@ export default function About() {
 
                         {/* Content Section */}
                         <div className="space-y-6 w-full lg:w-[520px]">
-                            <Image src={"/aboutus.png"} width={112} height={26} alt='blogs logo' className='mb-1' />
+                            <Image src={"/Aboutus.png"} width={112} height={26} alt='about logo' className='mb-1' />
                             <h2 className="text-3xl font-bold leading-tight">
                                 Food is an important part Of a balanced Diet
                             </h2>
