@@ -72,12 +72,12 @@ To run this project locally, follow these steps:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/elite-restaurant-website.git
+git clone https://github.com/Tahasaif3/Figma-Templa-9-Hackathon.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd elite-restaurant-website
+cd Figma-Templa-9-Hackathon
 ```
 
 3. Install dependencies:
