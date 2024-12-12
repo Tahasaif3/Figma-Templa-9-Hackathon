@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import Footer from "./footer"
 import { Calendar, User, MessageSquare, Search, Facebook, Twitter, Instagram } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "./ui/button"
@@ -383,6 +384,7 @@ export default function BlogDetails({ post }: BlogDetailsProps) {
           </div>
         </div>
       </div>
+    <Footer/>
     </div>
   )
 }
